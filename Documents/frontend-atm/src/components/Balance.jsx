@@ -5,12 +5,12 @@ function Balance() {
     const [depositAmount, setDepositAmount] = useState("");
 
     const checkBalance = () => {
-        setBalance(1500);
+        setBalance(1500.00);
     }
 
     const handleDeposit = () => {
         const amount = parseFloat(depositAmount);
-        if (!isNaN(amount) && amount > 0) {
+        if (!isNaN(amount) && amount > 0.00) {
             setBalance(balance + amount);
             setDepositAmount("")
         }
