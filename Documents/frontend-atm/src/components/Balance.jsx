@@ -16,9 +16,20 @@ function Balance() {
         }
     }
 
-    return {
+    return (
         <div>
         <button onClick={checkBalance}>Kolla saldo</button>
         <p>Ditt saldo: {balance} kr</p>
-    }
+
+        <input
+        type="number"
+        placeholder="Ange insättningsbelopp"
+        value={depositAmount}
+        onChange={(e) => setDepositAmount(e.target.value)}
+        />
+        <button onClick={handleDeposit}>Sätt in pengar</button>
+        </div>
+    )
 }
+
+export default Balance; 
