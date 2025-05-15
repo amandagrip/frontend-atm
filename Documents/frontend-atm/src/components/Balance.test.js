@@ -14,7 +14,7 @@ test("Visa saldo samt insättning av pengar.", () => {
         target: { value: "1000"},
     });
 
-    fireEvent.click(screen.getByText("Sätt in pengar."));
+    fireEvent.click(screen.getByText("Sätt in pengar"));
 
     expect(screen.getByText("Ditt saldo: 2500 kr")).toBeInTheDocument();
 });
