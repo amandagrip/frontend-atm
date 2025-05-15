@@ -30,8 +30,8 @@ jobs:
      - name: Cache node_modules
        uses: actions/cache@v3
        with:
-         path: node_modules
-         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+         path: Documents/frontend-atm/node_modules
+         key: ${{ runner.os }}-node-${{ hashFiles('Documents/frontend-atm/package-lock.json') }}
          restore-keys: |
            ${{ runner.os }}-node-
            ${{ runner.os }}-
@@ -39,7 +39,9 @@ jobs:
      # Install Dependencies
      - name: Install dependencies
        run: npm install
+       working-directory: Documents/frontend-atm
 
      # Run Tests
      - name: Run tests
-       run: npm test 
+       run: npm test
+       working-directory: Documents/frontend-atm
