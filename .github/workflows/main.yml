@@ -4,12 +4,12 @@ on:
  # Trigger the workflow on push to the 'main' branch
  push:
    branches:
-     - master
+     - main
 
  # Trigger the workflow on a pull request targeting the 'main' branch
  pull_request:
    branches:
-     - master
+     - main
 
 # Describe the actual job
 jobs:
